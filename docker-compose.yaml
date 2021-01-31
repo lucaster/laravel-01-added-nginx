@@ -6,6 +6,7 @@ services:
     ports: 
       - '8000:80'
     volumes: 
+      - ./src:/var/www/html
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
   # the php container's service name must be the same as in nginx.conf -> fastcgi_pass php
   php:
