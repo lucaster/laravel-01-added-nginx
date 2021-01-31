@@ -4,4 +4,5 @@ docker-compose build
 # the . will correspond to WORKDIR /var/www/html
 docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
 
-docker-compose up -d server php mysql
+# force docker-compose to reevaluate dockerfiles and rebuild images
+docker-compose up -d --build server php mysql
