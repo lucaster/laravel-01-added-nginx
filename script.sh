@@ -8,3 +8,5 @@ docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
 
 # force docker-compose to reevaluate dockerfiles and rebuild images
 docker-compose up -d --build server
+
+docker-compose run --rm artisan migrate
